@@ -4,6 +4,8 @@ import asyncio
 from discord.ext import commands
 from keep_alive import keep_alive
 
+keep_alive()
+
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
@@ -24,7 +26,7 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
-    if message.content.startswith('!start'):
+    if message.content.startswith('!vQI%^pu~>$'):
         global is_messaging
         if not is_messaging:
             is_messaging = True
@@ -62,4 +64,3 @@ async def send_and_delete_specific_message(channel):
 
 # Start the bot
 bot.run(os.environ['TOKEN'])
-keep_alive()
